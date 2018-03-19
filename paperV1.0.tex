@@ -1,0 +1,494 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{mathrsfs,amsmath,amstext,geometry,slashed}
+\title{The Feynman Rules in FRG}
+\author{Huang Chuang\\201421064}
+\date{\today}
+%%%% 段落首行缩进两个字 %%%%
+\makeatletter
+\let\@afterindentfalse\@afterindenttrue
+\@afterindenttrue
+\makeatother
+\setlength{\parindent}{2em}
+
+%%%% 下面的命令设置行间距与段落间距 %%%%
+\linespread{1.4}
+% \setlength{\parskip}{1ex}
+\setlength{\parskip}{0.5\baselineskip}
+
+\begin{document}
+\maketitle
+\setcounter{page}{0}
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\newpage
+\section{Formal Theory}
+For the generating functional with the regulator part
+\begin{equation}
+I_k\left[J\right]=\int\,\left[\mathrm{d}{\phi}\right]\,\mathrm{exp}\left(-S\left[\phi\right]-\Delta{S_k}\left[\phi\right]+J{\phi}\right)
+\end{equation}
+where
+\begin{equation}
+\Delta{S_k}\left[\phi\right]={\frac{1}{2}}\int\,\frac{{\mathrm{d}^D}x}{{\left(2\pi\right)}^D}\,{\phi_i\left(-x\right)}R_{k}{\phi_i\left(x\right)}
+\end{equation}
+\par For the bare Green Function without legs (Muta 3.1.21)
+\begin{align}
+\Gamma_{k}^{\left(n\right)}\left(p_i,m_0,g_0,k\right)={\frac{\Gamma_{R}^{\left(n\right)}\left(p_i,m,g,k\right)}{Z_{\phi_i}^{\frac n 2}}}
+\end{align}
+and
+\begin{align}
+\Gamma_{R}^{\left(n\right)}\left(p_i,m,g,k,\right)&={\frac{\Gamma_{R}^{\left(n\right)}\left(p_i,m,g,k\right)}
+{1+\Sigma\left(p_i,m_0,g_0,k,\right)+O\left(g^2\right)}}{\left(1+\Sigma\left(p_i,m_0,g_0,k\right)+O\left(g^2\right)\right)}
+\notag\\&=\Gamma_{k}^{\left(n\right)}\left(p_i,m_0,g_0,k\right){\left(1+\Sigma\left(p_i,m_0,g_0,k\right)+O\left(g^2\right)\right)}
+\end{align}
+where the $\Sigma$ is the one-loop diagram of corresponding Green function, $k$ is the truncation parameter, $m_0 $is the bare mass,$g_0$ is the bare coupling parameter, $m$ is the renormalized mass, $g$ is the renormalized coupling parameter. Plug (4) into (3)
+\begin{equation}
+1={\frac 1 {Z_{\phi}^{\frac n 2}}}{\left(1+\Sigma\left(p_i,m_0,g_0,k\right)+O\left(g^2\right)\right)}
+\end{equation}
+\par Define$\partial_t\equiv\frac{\partial_k}k$,then couple to (5)
+\begin{equation}
+\frac{\partial_{t}Z_{\phi}}{Z_{\phi}}=\partial_t{\Sigma}\left(p_i,m_0,g_0,k\right)
+\end{equation}
+plug (2) into (6)
+\begin{equation}
+\frac{\partial_{t}Z_{\phi}}{Z_{\phi}}={\frac{1}{2}}{\partial_{t}R_k}{\frac{\partial}{\partial R_k}}\Sigma\left(p_i,m_0,g_0,k\right)
+\end{equation}
+\par On the other hand, we have Wetterich Equation
+\begin{align}
+\partial_t \Pi_k \left[\Phi\right]&={\frac{1}{2}}\int\,\frac{{\mathrm{d}^D}x}{{\left(2\pi\right)}^D}\,{\partial_{t}R_k\left(x\right)}\Pi_k\left(x\right)
+\notag\\&=\frac{1}{2}\mathrm{Tr}[\partial_{t}R_{k}{(\Pi_{k}^{(2)} [\Phi]+R_{k})}^{-1}]
+\notag\\&=\frac{1}{2}\widetilde{\partial_{t}}[\mathrm{STr}(1-\mathrm{(GF)}+\frac{1}{2}\mathrm{{(GF)}^2}-\frac{1}{3}\mathrm{{(GF)}^3}+O(\mathrm{{(GF)}^3}))]
+\end{align}
+where $\Pi_k[\phi]$ is effective action. when we only consider the "classic" vertex
+\begin{equation}
+\Pi_k[\phi]=S_R[\phi]=\int\,\frac{{\mathrm{d}^D}x}{{\left(2\pi\right)}^D}\,Z_{\phi}^{\frac n 2}\mathscr{L}
+\end{equation}
+plug (9) into (8)
+\begin{equation}
+\frac{\partial_{t}Z_{\phi}}{Z_{\phi}}={\frac{1}{2}}{\partial_{t}R_k}{\frac{\partial}{\partial R_k}}\Sigma\left(p_i,m_0,g_0,k\right)
+\end{equation}
+which is the same as (7).So in this case we can use the method of calculating the Feynman diagrams in perturbation theory to obtain the Functional Renormalization  Group Equation. In the second section, we will take the six Feynman diagrams in the computation of the $\beta$ function for example to verify the conclusion in QCD.
+\par And because of the equivalency of the renormalization scheme, the FRG flow equation in this case is equivalent to the first-order Wilson RG flow equation when their truncations satisfy the same symmetry when the scalar $k\to\Lambda_{QCD}$.In the third section, we will choose the regulater which meet the gauge symmetry, obtain and simplify the FRG flow equation, and verify the equation of $g$ is the same as the $\beta$ function based on the dimensional regularization in Wilson RG method.
+
+\section{QCD Flow Equation}
+In Euclidean space, let the $\xi=1$, the QCD Lagrangian is
+\begin{align}
+\mathscr{L}_{QCD}=&\overline{\psi}(i\gamma_{\mu}\partial_{\mu}+m)\psi+g\overline{\psi}{\gamma_{\mu}}t^{a}{A^{a}_{\mu}}\psi-{\frac{1}{2}}A_{\mu}^{a}{\partial}^{2}A_{\mu}^{a}\notag\\&+{\overline{c}}^{a}{\partial}^{2}{\overline{c}}^{a}+ig{f}^{abc}{\overline{c}}^{a}\partial_{\mu}({A^{b}_{\mu}}c^c)\notag\\&+g{f}^{abc}(\partial_{\mu}A^{a}_{\nu})A^{b}_{\mu}A^{c}_{\nu}+{\frac{1}{4}}g^{2}f^{abe}f^{cde}A^{a}_{\mu}A^{b}_{\nu}A^{c}_{\mu}A^{d}_{\nu}
+\end{align}
+and define $\partial_{\mu}=p_{\mu}$ in this paper, so in the momentum space, the renormalized QCD Lagrangian is
+\begin{align}
+\mathscr{L}_{0}^{G}=&Z_{A,k}{\frac{1}{2}}A_{\mu}^{a}(-p)p^{2}\delta^{ab}\delta_{\mu\nu}A_{\nu}^{b}(p)
+\\\mathscr{L}_{0}^{F}=&Z_{\psi,k}\overline{\psi}(\slashed{p}+m)\psi
+\\\mathscr{L}_{0}^{FP}=&-Z_{c,k}{\overline{c}}^{a}(p)p^{2}c^{a}(p)
+\end{align}
+and the interation part
+\begin{align}
+\mathscr{L}_{I}^{3A}=&gZ_{A,k}^{\frac{3}{2}}{(2\pi)}^{4}{\delta}^{4}(p_1+p_2+p_3)f^{abc}A_{\nu}^{a}(p_3)A_{\mu}^{b}(p_1)A_{\nu}^{c}(p_2)p_{3\mu}
+\\\mathscr{L}_{I}^{4A}=&{\frac{1}{4}}g^{2}Z_{A,k}^{2}{(2\pi)}^{4}{\delta}^{4}(p_1+p_2+p_3+p_4)f^{abe}f^{cde}A_{\mu}^{a}(p_1)A_{\nu}^{b}(p_2)A_{\mu}^{c}(p_3)A_{\nu}^{d}(p_4)
+\\\mathscr{L}_{I}^{A\psi}=&gZ_{\psi,k}Z_{A,k}^{\frac{1}{2}}\overline{\psi}(p_1)\gamma_{\mu}t^{a}A_{\mu}^{a}(p_1-p_2)\psi(p_2)
+\\\mathscr{L}_{I}^{Ac}=&igZ_{c,k}Z_{A,k}^{\frac{1}{2}}f^{abc}p_{1\mu}{\overline{c}}^{a}(p_1)A_{\mu}^{b}(p_1-p_2)c^{c}(p_2)
+\end{align}
+\par The regulator action
+\begin{equation}
+{\Delta}S_{k}[\Phi]=\int_{x}\,\frac{1}{2}A_{\mu}^{a}R_{k,\mu\nu}^{ab}A_{\nu}^{b}+\int_{x}\,{\overline{c}}^{a}R_{k}^{ab}c^{b}+\int_{x}\,\overline{\psi}R_{k}^{\psi}\psi
+\end{equation}
+with
+\begin{align}
+R_{k,\mu\nu}^{ab}=&Z_{A}\delta^{ab}\delta_{\mu\nu}r_{A}(\frac{p^2}{k^2})p^2
+\\R_{k}^{ab}=&Z_{C}\delta^{ab}r_{A}(\frac{p^2}{k^2})p^2
+\\R_{k}^{\psi}=&Z_{\psi}r_{\psi}(\frac{p^2}{k^2})\slashed{p}
+\end{align}
+where we let ${(1+r_{\psi})}^{2}=1+r_A$
+\par For obtaining the $\beta$ function, we need to calculate the gluon self-energy part, the quark self-energy part and the quark-gluon vertex part. There are Feynman diagrams as follow.
+\subsection{Quark Self-energy Part}
+\subsubsection{Method I}
+We will use the method of calculating the Feynman diagrams in perturbation theory to obtain the functional renormalization  group equation.
+\\with the equation (7)
+\begin{equation}
+(\slashed{p}+m)\frac{\partial_{t}Z_{\psi,k}}{Z_{\psi,k}}+\partial_{t}m_{k}=\partial_{t}\int_{q}\,g\gamma_{\mu_1}t^{a_1}G_{k}^{\psi}(q)g\gamma_{\mu_2}t^{a_2}G_{k}^{A}(p-q)\delta_{\mu_1 \mu_2}\delta^{a_1 a_2}
+\end{equation}
+with
+\begin{align}
+G_{k}^{\psi}(q)=&\frac{1}{\slashed{q}(1+r_{\psi})+m}\notag\\=&\frac{\slashed{q}(1+r_{\psi})-m}{q^2{(1+r_{\psi})}^2-m^2}
+\\G_{k}^{A}(p-q)=&\frac{1}{{(p-q)}^2 (1+r_A)}
+\end{align}
+\par Calculate the group index
+\begin{equation}
+\delta^{a_1 a_2}t^{a_1}t^{a_2}=C_{n}(N_f)
+\end{equation}
+with $\{\gamma_{\mu},\gamma_{\nu}\}=2\delta_{\mu\nu}$, the vector part
+\begin{equation}
+\gamma_{\mu_1}({\slashed{q}(1+r_{\psi})-m})\gamma_{\mu_2}\delta_{\mu_1 \mu_2}=-4m-2\slashed{q}(1+r_{\psi})
+\end{equation}
+\par So, the equation(23) can be reduced to
+\begin{align}
+(\slashed{p}+m)\frac{\partial_{t}Z_{\psi,k}}{Z_{\psi,k}}+\partial_{t}m_{k}
+&=C_F\partial_{t}\int_{q}\,g^2 (-4m-2\slashed{q}(1+r_{\psi}))\frac{1}{q^2{(1+r_{\psi})}^2-m^2}\frac{1}{{(p-q)}^2 (1+r_A)}
+\notag\\&=\Gamma_{kQ}
+\end{align}
+\subsubsection{Method II}
+We will calculate the Wetterich equation directly.
+\par Consider the Wetterich equation
+\begin{align}
+\partial_{t}\Pi_k [\Phi]&=\frac{1}{2}\mathrm{Tr}[\partial_{t}R_{k}{(\Pi_{k}^{(2)} [\Phi]+R_{k})}^{-1}]
+\notag\\&=\frac{1}{2}\widetilde{\partial_{t}}[\mathrm{STr}(1-\mathrm{(GF)}+\frac{1}{2}\mathrm{{(GF)}^2}-\frac{1}{3}\mathrm{{(GF)}^3}+O(\mathrm{{(GF)}^3}))]
+\end{align}
+\par Where the $\tilde{\partial_{t}}$ is the derivative of the regulator function, $\mathrm{G}$ is the propagator matrix, $\mathrm{F}$ is the vertex matrix.Now,we will give $\mathrm{G}$ and $\mathrm{F}$ as follow.In this case, the one-loop diagram has two vertexes, so we only consider the $\mathrm{{(GF)}^2}$ term.
+\par The effective action in quark self-energy diagram
+\begin{align}
+\Pi_{0k}[\psi,A]&=\int_{p}\,Z_{\psi,k}\overline{\psi}(\slashed{p}+m)\psi+\int_{p}\,Z_{A,k}{\frac{1}{2}}A_{\mu}^{a}(-p)p^{2}(\delta_{\mu\nu})A_{\nu}^{a}(p)
+\\\Pi_{Ik}[\psi,A]&=\int_{p}\,gZ_{\psi,k}Z_{A,k}^{\frac{1}{2}}\overline{\psi}(p_1)\gamma_{\mu}t^{a}A_{\mu}^{a}(p_1-p_2)\psi(p_2)
+\end{align}
+\par So, the renormalized propagators as follow
+\begin{align}
+\widetilde{G_{AA}}&=\frac{1}{Z_{A,k}}\frac{1}{{q}^2 (1+r_A)}\delta_{\mu_1 \mu_2}\delta^{a_1 a_2}
+\\\widetilde{G_{\psi\overline{\psi}}}&=\frac{1}{Z_{\psi,k}}\frac{1}{\slashed{q}(1+r_{\psi})+m}
+\\\widetilde{G_{\overline{\psi}\psi}}&=-{\widetilde{G_{\psi\overline{\psi}}}}^{T}
+\end{align}
+\par The $\mathrm{G}$ matrix
+\begin{gather}
+\mathrm{G}=\begin{pmatrix}\widetilde{G_{AA}}&0&0\\0&0&\widetilde{G_{\psi\overline{\psi}}}\\0&{\widetilde{G_{\overline{\psi}\psi}}}&0\end{pmatrix}
+\end{gather}
+\par The renormalized vertexes as follow
+\begin{align}
+F^{A\psi}&=\tilde{g}\overline{\psi}\gamma_{\mu}t^{a}
+\\F^{\overline{\psi}A}&=\tilde{g}\gamma_{\mu}t^{a}\psi
+\\F^{\psi A}&=-\tilde{g}{(\gamma_{\mu}t^{a})}^{T}{\overline{\psi}}^T
+\\F^{A\overline{\psi}}&=-\tilde{g}{\psi}^{T}{({\gamma_{\mu}t^{a}})}^T
+\end{align}
+\par Where the $\tilde{g}=Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}g$.So, the $\mathrm{F}$ matrix
+\begin{gather}
+\mathrm{F}=\begin{pmatrix}0&F^{A\psi}&F^{A\overline{\psi}}\\F^{\psi A}&0&0\\F^{\overline{\psi}A}&0&0\end{pmatrix}
+\end{gather}
+\par The trace of the $\mathrm{{(GF)}^2}$ can be written as
+\begin{equation}
+\mathrm{STr}\mathrm{{(GF)}^2}=2(\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}-\widetilde{G_{AA}}{(F^{\overline{\psi}A})}^{T}{(\widetilde{G_{\psi\overline{\psi}}})}^{T}{(F^{A\psi})}^{T})
+\end{equation}
+\par The first part of the right
+\begin{align}
+\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}=&{\int}_{q}\,{\tilde{g}}^{2}\frac{1}{Z_{A,k}}\frac{1}{{(p-q)}^2 (1+r_A)}\frac{1}{Z_{\psi,k}}C_F\delta_{\mu_1 \mu_2}\overline{\psi}\gamma_{\mu_1}
+\notag\\&\,\,\,\,\,\,\,\frac{1}{q^{2}{(1+r_\psi)}^{2}-m^2}(\slashed{q}(1+r_\psi)-m)\gamma_{\mu_2}\psi
+\notag\\=&\int_{q}\,g^{2}Z_{\psi,k}C_F\frac{1}{{(p-q)}^2 (1+r_A)}\frac{1}{q^{2}{(1+r_\psi)}^{2}-m^2}
+\notag\\&\,\,\,\,\,\,\,\overline{\psi}\psi\delta_{\mu_1 \mu_2}\gamma_{\mu_1}(\slashed{q}(1+r_\psi)-m)\gamma_{\mu_2}
+\notag\\=&\int_{q}\,g^2 C_F (-4m-\slashed{q}(1+r_{\psi}))\frac{1}{q^2{(1+r_{\psi})}^2-m^2}\frac{1}{{(p-q)}^2 (1+r_A)}
+\end{align}
+\par Because that the exchange of the $\overline{\psi}$ and $\psi$ contribute a negative sign, the conjugate term
+\begin{equation}
+\widetilde{G_{AA}}{(F^{\overline{\psi}A})}^{T}{(\widetilde{G_{\psi\overline{\psi}}})}^{T}{(F^{A\psi})}^{T}=-\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}
+\end{equation}
+\par So the $\mathrm{STr}{(\mathrm{GF})}^2$ can be worked out
+\begin{equation}
+\mathrm{STr}{(\mathrm{GF})}^2=4\int_{q}\,g^2 C_F (-4m-\slashed{q}(1+r_{\psi}))\frac{1}{q^2{(1+r_{\psi})}^2-m^2}\frac{1}{{(p-q)}^2 (1+r_A)}
+\end{equation}
+\par From the Wetterich equation
+\begin{equation}
+\partial_{t}\Pi_k [\Phi]=\frac{1}{4}\widetilde{\partial_{t}}[\mathrm{STr}{(\mathrm{GF})}^2]
+\end{equation}
+plug (44) to the equation ,we infer
+\begin{align}
+(\slashed{p}+m)\frac{\partial_{t}Z_{\psi,k}}{Z_{\psi,k}}+\partial_{t}m_{k}
+&=C_F\partial_{t}\int_{q}\,g^2 (-4m-2\slashed{q}(1+r_{\psi}))\frac{1}{q^2{(1+r_{\psi})}^2-m^2}\frac{1}{{(p-q)}^2 (1+r_A)}
+\notag\\&=\Gamma_{kQ}
+\end{align}
+\par The conclusion is the same as the Method I.
+\subsection{Gluon Self-energy Part}
+\subsubsection{Method I}
+\par The gluon-loop diagram can be inferred
+\begin{align}
+\Gamma_{kG}
+=&{\frac{1}{2}}\int_{q}\,gf^{acd}V_{\mu \mu_1 \mu_2}(p,-(p+q),q)G_{k}^{A}(q)\delta_{\mu_1 \mu_2}
+\notag\\&gf^{bdc}V_{\nu \nu_1 \nu_2}(-p,p+q,-q)G_{k}^{A}(p+q)\delta_{\nu_1 \nu_2}
+\notag\\=-&\frac{1}{2}\int_{q}\,g^{2}\delta^{ab}C_{G}{\frac{1}{q^{2}{(p+q)}^2}}{\frac{1}{1+r_{A}(\frac{q^2}{p^2})}}{\frac{1}{1+r_{A}(\frac{{(p+q)}^2}{p^2})}}
+\notag\\&((2q^2+2pq+5p^2)\delta_{\mu\nu}+10q_{\mu}q_{\nu}+5(p_{\mu}q_{\nu}+p_{\nu}q_{\mu})-2p_{\mu}p_{\nu})
+\end{align}
+\par Where the $\frac{1}{2}$ is the replication factor, and the vertex tensor is defined as
+\begin{equation}
+V_{\mu_1 \mu_2 \mu_3}(p_1,p_2,p_3)={(p_1-p_2)}_{\mu_3}\delta_{\mu_1 \mu_2}+{(p_2-p_3)}_{\mu_1}\delta_{\mu_2 \mu_3}+{(p_3-p_2)}_{\mu_2}\delta_{\mu_1 \mu_3}
+\end{equation}
+The ghost-loop diagram is given by
+\begin{align}
+\Gamma_{kFP}
+=&-\int_{q}\,gf^{acd}q_{\mu}{\frac{-1}{q^2}}{\frac{1}{1+r_{A}(\frac{q^2}{p^2})}}gf^{bdc}{(p+q)}_{\nu}{\frac{-1}{{(p+q)}^2}}{\frac{1}{1+r_{A}(\frac{{(p+q)}^2}{p^2})}}
+\notag\\=&\int_{q}\,g^2 C_{G}\delta^{ab}\frac{1}{q^{2}{(p+q)}^2}{\frac{1}{1+r_{A}(\frac{q^2}{p^2})}}{\frac{1}{1+r_{A}(\frac{{(p+q)}^2}{p^2})}}(q_{\mu}q_{\nu}+q_{\mu}p_{\nu})
+\end{align}
+\par Finally, we calculate the fermion-loop diagram contribution
+\begin{align}
+\Gamma_{kF}
+=&-N_{f}\int_{q}\,\mathrm{Tr}\big[g\gamma_{\mu}T^{a}{\frac{(\slashed{p}+\slashed{q})(1+r_{\psi}(\frac{{(p+q)}^2}{k^2}))-m}{{(p+q)}^2{(1+r_{\psi}(\frac{{(p+q)}^2}{k^2}))}^2-m^2}}
+\notag\\&\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,g\gamma_{\nu}T^{b}{\frac{\slashed{q}(1+r_{\psi}(\frac{{q}^2}{k^2}))-m}{{q}^2{(1+r_{\psi}(\frac{{q}^2}{k^2}))}^2-m^2}}\big]
+\notag\\=&4g^{2}N_{f}T_{R}\delta^{ab}\int_{q}\,\frac{1}{{(p+q)}^2{(1+r_{\psi}(\frac{{(p+q)}^2}{k^2}))}^2-m^2}\frac{1}{{q}^2{(1+r_{\psi}(\frac{{q}^2}{k^2}))}^2-m^2}
+\notag\\&\big((1+r_{\psi}(\frac{{(p+q)}^2}{k^2}))(1+r_{\psi}(\frac{{q}^2}{k^2}))(p_{\mu}q_{\nu}+q_{\nu}p_{\mu}+q_{\mu}q_{\nu}+p_{\mu}p_{\nu}-\delta_{\mu\nu}(p\cdot q+q^2))+m^2\big)
+\end{align}
+\par So, the flow equation is
+\begin{equation}
+\frac{\partial_{t}Z_{A,k}}{Z_{A,k}}\delta^{ab}p^{2}\delta_{\mu\nu}=\partial_{t}(\Gamma_{kG}+\Gamma_{kFP}+\Gamma_{kF})
+\end{equation}
+\subsubsection{Method II}
+\par First, we calculate the remaining matrix elements of $\mathrm{G}$ and $\mathrm{F}$.The ghost propagator
+\begin{align}
+\widetilde{G_{\overline{c}c}}=\widetilde{G_{c\overline{c}}}=\frac{1}{Z_{c,k}}\frac{-1}{q^2}
+\end{align}
+\par About the $F^{AA}$, the differential coefficient of interaction Lagrangian
+\begin{align}
+\frac {\partial^2}{\partial A_{\mu}^{a} \partial A_{\nu}^{b}}\mathscr{L}^{3A}=&\big(-{(\partial_\rho)}_{a}f^{abc}\delta_{\mu\nu}A_{\rho}^{c}-{(\partial_\nu)}_{a}f^{abc}A_{\mu}^{c}
+\notag\\&+{(\partial_\rho)}_{b}f^{abc}\delta_{\mu\nu}A_{\rho}^{c}+f^{acb}\partial_{\nu}A_{\mu}^{c}
+\notag\\&-{(\partial_{\mu})}_{b}f^{abc}A_{\nu}^{c}-f^{abc}\partial_{\mu}A_{\nu}^{c}\big)gZ_{A,k}^{\frac{3}{2}}
+\end{align}
+\par The down latin letter is only a index, and it doesn't have physical sense.
+\par Turn it to the momentum space
+\begin{align}
+F^{AA}=&gZ_{A,k}^{\frac{3}{2}}f^{abc}\big(\delta_{\mu\nu}{(p_2-p_1)}_{\rho}A_{\rho}^{c}
+\notag\\&+\delta_{\mu\rho}{(p_1-p_3)}_{\nu}A_{\rho}^{c}+\delta_{\nu\rho}{(p_3-p_2)}_{\mu}A_{\rho}^{c}
+\notag\\=&gZ_{A,k}^{\frac{3}{2}}f^{abc}V_{\mu\nu\rho}(p_1,p_2,p_3)A_{\rho}^{c}
+\end{align}
+\par As the same way, the $F^{\overline{c}c}$ and $F^{c\overline{c}}$ can be inferred
+\begin{align}
+F^{\overline{c}c}=-F^{c\overline{c}}=g_{R}Z_{c,k}Z_{A,k}^{\frac{1}{2}}f^{abc}{(p_1)}_{\mu}A_{\mu}^{b}
+\end{align}
+\par So, the matrix
+\begin{gather}
+\mathrm{G}=\begin{pmatrix}\widetilde{G_{AA}}&0&0&0&0\\0&0&\widetilde{G_{\psi\overline{\psi}}}&0&0\\0&{\widetilde{G_{\overline{\psi}\psi}}}&0&0&0\\0&0&0&0&\widetilde{G_{c\overline{c}}}\\0&0&0&\widetilde{G_{\overline{c}c}}&0\end{pmatrix}
+\end{gather}
+and
+\begin{gather}
+\mathrm{F}=\begin{pmatrix}F^{AA}&0&0&0&0\\0&0&F^{\psi\overline{\psi}}&0&0\\0&F^{\overline{\psi}\psi}&0&0&0\\0&0&0&0&F^{c\overline{c}}\\0&0&0&F^{\overline{c}c}&0\end{pmatrix}
+\end{gather}
+\par The super trace can be calculated
+\begin{align}
+\mathrm{STr}{(\mathrm{GF})}^2=&\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{AA}+\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}
+\notag\\&+\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}+\widetilde{G_{c\overline{c}}}F^{\overline{c}c}\widetilde{G_{c\overline{c}}}F^{\overline{c}c}+\widetilde{G_{\overline{c}c}}F^{c\overline{c}}\widetilde{G_{\overline{c}c}}F^{c\overline{c}}
+\end{align}
+\par Step calculate every part
+\begin{align}
+\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{AA}=&\int_{q}\,Z_{A,k}g^{2}f^{a a_1 a_2}f^{b b_2 b_1}\delta_{a_1 b_1}\delta_{a_2 b_2}\frac{1}{q^{2}(1+r_{A}(\frac{q^2}{k^2}))}\frac{1}{{(p+q)}^{2}(1+r_{A}(\frac{{(p+q)}^2}{k^2}))}
+\notag\\&\delta_{\mu_1 \nu_1}V_{\mu \mu_1 \mu_2}(p,-p-q,q)\delta_{\mu_2 \nu_2}V_{\nu \nu_1 \nu_2}(-p,p+q,-q)A_{\mu}^{a}A_{\nu}^{b}
+\notag\\=&2Z_{A,k}\Gamma_{kG}A_{\mu}^{a}A_{\nu}^{b}
+\end{align}
+\par As the same method, we can get the fermion field part
+\begin{align}
+\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\overline{\psi}\psi}}F^{\overline{\psi}\psi}=&\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}
+\notag\\=&Z_{A,k}\Gamma_{kF}A_{\mu}^{a}A_{\nu}^{b}
+\end{align}
+and the ghost field part
+\begin{align}
+\widetilde{G_{c\overline{c}}}F^{\overline{c}c}\widetilde{G_{\overline{c}c}}F^{\overline{c}c}=&\widetilde{G_{\overline{c}c}}F^{c\overline{c}}\widetilde{G_{\overline{c}c}}F^{c\overline{c}}
+\notag\\=&2Z_{A,k}\Gamma_{kFP}A_{\mu}^{a}A_{\nu}^{b}
+\end{align}
+plug it to the Wetrrich equation
+\begin{equation}
+\partial_{t}\Pi_k [\Phi]=\frac{1}{4}\widetilde{\partial_{t}}[\mathrm{STr}{(\mathrm{GF})}^2]
+\end{equation}
+we have
+\begin{equation}
+\int_{p}\,\partial_{t}Z_{A,k}{\frac{1}{2}}A_{\mu}^{a}p^{2}\delta_{\mu\nu}\delta^{ab}A_{\nu}^{a}=\frac{1}{4}\int_{p}\,\widetilde{\partial_{t}}(2Z_{A,k}\Gamma_{kG}A_{\mu}^{a}A_{\nu}^{b}+2Z_{A,k}\Gamma_{kF}A_{\mu}^{a}A_{\nu}^{b}+2Z_{A,k}\Gamma_{kFP}A_{\mu}^{a}A_{\nu}^{b})
+\end{equation}
+reduce the (63)
+\begin{equation}
+\frac{\partial_{t}Z_{A,k}}{Z_{A,k}}\delta^{ab}p^{2}\delta_{\mu\nu}=\partial_{t}(\Gamma_{kG}+\Gamma_{kFP}+\Gamma_{kF})
+\end{equation}
+\par It is the same as the flow equation of the Method I.
+\subsection{Quark-gloun Vertex Part}
+\subsubsection{Method I}
+\par The first diagram which has two quark lines and one gloun line can be written as 
+\begin{align}
+\Gamma_{kV_1}=
+&\int_{q}\,g\gamma_{\mu}t^{a}G_{k}^{\psi}(q)g\gamma_{\mu_1}t^{a_1}G_{k}^{\psi}(q)g\gamma_{\mu_2}t^{a_2}G_{k}^{A}(q)\delta_{\mu_1 \mu_2}\delta^{a_1 a_2}
+\notag\\=&\int_{q}\,g^3 (C_{F}-\frac{1}{2}C_{G}){\big(\frac{1}{q^2{(1+r_{\psi})}^2-m^2}\big)}^{2}\frac{1}{{q}^2 (1+r_A)}
+\notag\\&\gamma_{\mu}\big(\slashed{q}(1+r_{\psi})-m\big)\gamma_{\mu_1}\big(\slashed{q}(1+r_{\psi})-m\big)\gamma_{\mu_2}\delta_{\mu_1 \mu_2}
+\notag\\=&-\int_{q}\,g^3 (C_{F}-\frac{1}{2}C_{G}){\big(\frac{1}{q^2{(1+r_{\psi})}^2-m^2}\big)}^{2}\frac{1}{{q}^2 (1+r_A)}\gamma_{\mu}(q^{2}-2m^{2})
+\end{align}
+\par The second diagram which has two gluon lines and one quark line can be written as
+\begin{align}
+\Gamma_{kV_2}=
+&\int_{q}\,g\gamma_{\mu_1}t^{a_1}G_{k}^{\psi}(q)g\gamma_{\mu_2}t^{a_2}G_{k}^{A}(-q)\delta_{\mu_1 \mu_1'}\delta^{a_1 a_1'}G_{k}^{A}(q)\delta_{\mu_2 \mu_2'}\delta^{a_2 a_2'}gf^{a a_1' a_2'}V_{\mu\mu_1' \mu_2'}(q,-q,0)
+\notag\\=&\frac{1}{2}\int_{q}\,g^{3}C_{G}\frac{1}{q^2{(1+r_{\psi})}^2-m^2}{\big(\frac{1}{{q}^2 (1+r_A)}\big)}^{2}\gamma_{\mu_1}\big(\slashed{q}(1+r_{\psi})-m\big)\gamma_{\mu_2}V_{\mu\mu_1 \mu_2}(q,-q,0)
+\notag\\=&\frac{1}{2}\int_{q}\,g^{3}C_{G}\frac{1}{q^2{(1+r_{\psi})}^2-m^2}{\big(\frac{1}{{q}^2 (1+r_A)}\big)}^{2}\gamma_{\mu}q^{2}
+\end{align}
+\par So the flow equation is 
+\begin{equation}
+\frac{\partial_{t}(Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}g)}{Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}}\gamma_{\mu}=\partial_{t}(\Gamma_{kV_1}+\Gamma_{kV_2})
+\end{equation}
+\subsubsection{Method II}
+\par The $\mathrm{G}$ matrix
+\begin{gather}
+\mathrm{G}=\begin{pmatrix}\widetilde{G_{AA}}&0&0\\0&0&\widetilde{G_{\psi\overline{\psi}}}\\0&{\widetilde{G_{\overline{\psi}\psi}}}&0\end{pmatrix}
+\end{gather}
+\par The $\mathrm{F}$ matrix
+\begin{gather}
+\mathrm{F}=\begin{pmatrix}F^{AA}&F^{A\psi}&F^{A\overline{\psi}}\\F^{\psi A}&0&F^{\psi\overline{\psi}}\\F^{\overline{\psi}A}&F^{\overline{\psi}\psi}&0\end{pmatrix}
+\end{gather}
+\par The diagonal element of the $\mathrm{{(GF)}^{3}}$
+\begin{align}
+\mathrm{{(GF)}^3}_{11}
+&=\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}+\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}
+\notag\\&+\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{AA}+\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{AA}}F^{AA}
+\notag\\&+\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{AA}}F^{AA}+\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}
+\notag\\&+\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}
+\end{align}
+\begin{align}
+\mathrm{{(GF)}^3}_{22}
+&=\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}+\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}
+\notag\\&+\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}+\widetilde{G_{AA}}F^{AA}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}
+\end{align}
+\begin{align}
+\mathrm{{(GF)}^3}_{33}
+&=\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{AA}}F^{A\overline{\psi}}+\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}
+\notag\\&+\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}+\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{A\overline{\psi}}
+\end{align}
+\par Where the $\widetilde{G_{AA}}F^{AA}$, $\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}$ and $\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}$ are the diagrams of the three-gluon vertex part, so they need to be excluded.
+\par For the others, plug the matrix elements of $\mathrm{G}$ and $\mathrm{F}$ to them, we can proof the following conclusion by direct and trivial compute like we do in the (2.1.2) and (2.2.2).
+\begin{align}
+&\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}=\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}
+\notag\\=&\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}=\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}\psi}
+\notag\\=&\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}\widetilde{G_{AA}}F^{A\overline{\psi}}=\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi\overline{\psi}}
+\notag\\=&-\overline{\psi}(p_1)\Gamma_{kV_1}A_{\mu}^{a}(p_1-p_2)\psi(p_2)
+\end{align} 
+\begin{align}
+&\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{AA}}F^{AA}=\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{AA}}F^{AA}
+\notag\\=&\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{A\psi}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}=\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{A\overline{\psi}}\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}
+\notag\\=&\widetilde{G_{AA}}F^{AA}\widetilde{G_{\psi\overline{\psi}}}F^{\overline{\psi}A}\widetilde{G_{AA}}F^{A\psi}=\widetilde{G_{\overline{\psi}\psi}}F^{\psi A}\widetilde{G_{AA}}F^{AA}\widetilde{G_{AA}}F^{A\overline{\psi}}
+\notag\\=&-\overline{\psi}(p_1)\Gamma_{kV_2}A_{\mu}^{a}(p_1-p_2)\psi(p_2)
+\end{align}
+\par The Wetterich equation
+\begin{equation}
+\partial_{t}\Pi_k [\Phi]=-\frac{1}{6}\widetilde{\partial_{t}}[\mathrm{STr}{(\mathrm{GF})}^3]
+\end{equation}
+\par So, the flow equation
+\begin{align}
+&\int_{p_1,p_2}\,\partial_{t}\big(gZ_{\psi,k}Z_{A,k}^{\frac{1}{2}}\overline{\psi}(p_1)\gamma_{\mu}t^{a}A_{\mu}^{a}(p_1-p_2)\psi(p_2)\big)
+\notag\\=&-\frac{1}{6}\int_{p_1,p_2}\,\widetilde{\partial_{t}}Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}\overline{\psi}(p_1)(-6\Gamma_{kV_1}-6\Gamma_{kV_2})A_{\mu}^{a}(p_1-p_2)\psi(p_2)
+\end{align}
+\par Reduce the (76), we can get the final expression
+\begin{equation}
+\frac{\partial_{t}(Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}g)}{Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}}\gamma_{\mu}=\partial_{t}(\Gamma_{kV_1}+\Gamma_{kV_2})
+\end{equation}
+\par It's the same as the conclusion of Method I.
+\section{The\,\,\,$\beta$\,\,\,Function}
+Before calculating the flow equation, two conditions need to be given frist:
+\par(1)When the $k\to\Lambda_{QCD}$, the $m\ll q$ and $p\ll q$ will lead to $\frac{m}{q}\sim\frac{p}{q}\sim0$ and $r(\frac{{p}^2}{q^2})\approx r(\frac{{(p-q)}^2}{q^2})$.
+\par(2)We can always let the ${(1+r_{\psi})}^2=1+r_{A}=1+r_{c}$
+\par About the integral, there is a trick for integration by subsititution. For $r(\frac{p^2}{q^2})$, let $\frac{p^2}{q^2}=\xi$, so
+\begin{align}
+\partial_{k}r&=(\partial_{\xi}r)(\frac{\partial\xi}{\partial k})=-\frac{2q^2}{k^3}(\partial_{\xi}r)
+\\\partial_{q}r&=(\partial_{\xi}r)(\frac{\partial\xi}{\partial q})=\frac{2q}{k^2}(\partial_{\xi}r)
+\end{align}
+then we get $k\partial_{k}r=-q\partial_{q}r$. Finally
+\begin{align}
+(\partial_{t}r)\mathrm{d}q=-q\partial_{q}r\mathrm{d}q=-q\mathrm{d}r
+\end{align}
+\par The integral $\mathrm{d}q$ can be transformed to 
+\begin{align}
+\partial_{t}\int_{q}\,f(r)=\partial_{t}\int\frac{{\mathrm{d}}^4 q}{{(2\pi)}^4}f(r)=\partial_{t}\int\frac{\mathrm{d}q}{8{\pi}^2}q^{3}f(r)=-\int_{0}^{+\infty}\frac{\mathrm{d}r_{A}}{8{\pi}^2}q^{4}\partial_{r_A}f(r)
+\end{align}
+\par Now we can calaulate the one-loop diagrams.The quark-self energy part
+\begin{align}
+\partial_{t}\Gamma_{kQ}=
+&\partial_{t}\int_{q}\,g^{2}C_F(-4m-2\slashed{q}(1+r_{\psi}))\frac{1}{q^{2}{(1+r_{\psi})}^2}\frac{1}{{(p-q)}^{2}(1+r_{A})}
+\notag\\=&-g^{2}C_F\partial_{t}\int_{q}\,4m\frac{1}{{(1+r_{\psi})}^4}\frac{1+\frac{2p\cdot q}{q^2}}{q^4}+2\frac{1}{{(1+r_{\psi})}^3}\frac{\slashed{q}(1+\frac{2p\cdot q}{q^2})}{q^4}
+\notag\\=&-g^{2}C_F\partial_{t}\int_{q}\,4m\frac{1}{{(1+r_{\psi})}^4}\frac{1}{q^4}+4\frac{1}{{(1+r_{\psi})}^3}\frac{\gamma_{\rho}q_{\rho}q_{\mu}p_{\mu}}{q^6}
+\notag\\=&g^{2}C_F\int_{0}^{+\infty}4m\partial_{r_{A}}\big(\frac{1}{{(1+r_{A})}^2}\big)\frac{\mathrm{d}r_{A}}{8{\pi}^2}+\partial_{r_{A}}\big(\frac{1}{{(1+r_{A})}^{\frac{3}{2}}}\big)\frac{\mathrm{d}r_{A}}{8{\pi}^2}
+\notag\\=&-g^{2}C_F\frac{1}{8{\pi}^2}(\slashed{p}+m)-g^{2}C_{F}\frac{3}{8{\pi}^2}m
+\end{align}
+\par So, the flow equations are
+\begin{align}
+\frac{\partial_{t}Z_{\psi,k}}{Z_{\psi,k}}&=-g^{2}C_F\frac{1}{8{\pi}^2}
+\\\frac{\partial_{t}m}{m}&=-g^{2}C_F\frac{3}{8{\pi}^2}
+\end{align}
+\par The gloun-loop in gloun self-energy part
+\begin{align}
+\partial_{t}\Gamma_{kG}=
+&-\frac{1}{2}\partial_{t}\int_{q}\,g^{2}\delta^{ab}C_{G}\frac{1}{q^2}\frac{1}{{(p+q)}^2}\frac{1}{{(1+r_{A})}^2}
+\notag\\&\big((2q^2+2pq+5p^2)\delta_{\mu\nu}+10q_{\mu}q_{\nu}+5(p_{\mu}q_{\nu}+p_{\nu}q_{\mu})-2p_{\mu}p_{\nu}\big)
+\end{align}
+\par Expanse the fomula and keep it to the second order of $p$
+\begin{equation}
+\frac{q}{{(p+q)}^2}=1-\frac{2p\cdot q}{q^2}-\frac{p^2}{q^2}+\frac{4{(p\cdot q)}^2}{q^4}
+\end{equation}
+then
+\begin{align}
+\partial_{t}\Gamma_{kG}=
+&-\frac{1}{2}\partial_{t}\int_{q}\,g^{2}\delta^{ab}C_{G}\frac{1}{{(1+r_{A})}^2}\frac{1}{q^4}\big(5p^{2}-2p_{\mu}p_{\nu}
+\notag\\&-\frac{2p\cdot q}{q^2}(2p\cdot q\delta_{\mu\nu}+5p_{\mu}q_{\nu}+5p_{\nu}q_{\mu})
+\notag\\&-\frac{p^2}{q^2}(2q^{2}\delta_{\mu\nu}+10q_{mu}q_{\nu})
+\notag\\&-\frac{4{(p\cdot q)}^2}{q^4}(2q^{2}\delta_{\mu\nu}+10q_{mu}q_{\nu})\big)
+\end{align}
+\par Use the formulas
+\begin{align}
+\int{\mathrm{d}}^{4}qq_{\mu}q_{\nu}f(q^2)&=\frac{1}{4}\delta_{\mu\nu}\int{\mathrm{d}}^{4}qq^{2}f(q^2)
+\\\int{\mathrm{d}}^{4}qq_{\mu}q_{\nu}q_{\rho}q_{\sigma}f(q^2)&=\frac{1}{24}(\delta_{\mu\nu}\delta_{\rho\sigma}+\delta_{\mu\rho}\delta_{\nu\sigma}+\delta_{\mu\sigma}\delta_{\rho\nu})\int{\mathrm{d}}^{4}qq^{4}f(q^2)
+\end{align}
+\par And calculate the integral, the $\partial_{t}\Gamma_{kG}$ can be reduced to
+\begin{equation}
+\partial_{t}\Gamma_{kG}=-g^{2}\delta^{ab}C_{G}\frac{1}{8\pi^2}(\frac{19}{12}p^{2}\delta_{\mu\nu}-\frac{11}{6}p_{\mu}p_{\nu})
+\end{equation}
+\par As the same way, we can calculate the others
+\begin{align}
+\partial_{t}\Gamma_{kFP}
+=&\partial_{t}\int_{q}\,g^2 C_{G}\delta^{ab}\frac{1}{q^{2}{(p+q)}^2}{\frac{1}{{(1+r_{A})}^2}}(q_{\mu}q_{\nu}+q_{\mu}p_{\nu})
+\notag\\=&\partial_{t}\int_{q}\,g^{2}C_{G}\delta^{ab}\frac{1}{q^4}\frac{1}{{(1+r_{A})}^2}(-\frac{2p\cdot q}{q^2}q_{\mu}p_{\nu}-\frac{p^2}{q^2}q_{\mu}q_{\nu}+\frac{4{(p\cdot q)}^2}{q^4}q_{\mu}q_{\nu})
+\notag\\=&-g^{2}\delta^{ab}C_{G}\frac{1}{8\pi^2}(\frac{1}{12}p^{2}\delta_{\mu\nu}+\frac{1}{6}p_{\mu}p_{\nu})
+\end{align}
+\begin{align}
+\partial_{t}\Gamma_{kF}
+=&4g^{2}N_{f}T_{R}\delta^{ab}\partial_{t}\int_{q}\,\frac{1}{q^{2}{(p+q)}^2}{\frac{1}{1+r_{A}}}
+\notag\\&\big(p_{\mu}q_{\nu}+q_{\nu}p_{\mu}+q_{\mu}q_{\nu}+p_{\mu}p_{\nu}-\delta_{\mu\nu}(p\cdot q+q^2)+{\frac{1}{1+r_{A}}}m^{2}\big)
+\notag\\=&4g^{2}N_{f}T_{R}\delta^{ab}\partial_{t}\int_{q}\,\frac{1}{q^{4}}{\frac{1}{1+r_{A}}}\big(p_{\mu}p_{\nu}
+\notag\\&-\frac{2p\cdot q}{q^2}(-p\cdot q\delta_{\mu\nu}+p_{\mu}q_{\nu}+p_{\nu}q_{\mu})
+\notag\\&-\frac{p^2}{q^2}(-q^{2}\delta_{\mu\nu}+q_{\mu}q_{\nu}+{\frac{1}{1+r_{A}}}m^{2})
+\notag\\&-\frac{4{(p\cdot q)}^2}{q^4}(-q^{2}\delta_{\mu\nu}+q_{\mu}q_{\nu}+{\frac{1}{1+r_{A}}}m^{2})\big)
+\notag\\=&\frac{4}{3}g^{2}N_{f}T_{R}\frac{1}{8\pi^2}(p^{2}\delta_{\mu\nu}-p_{\mu}p_{\nu})
+\end{align}
+\par So we can get the flow equation
+\begin{equation}
+\frac{\partial_{t}Z_{A,k}}{Z_{A,k}}=-\frac{5}{3}g^{2}\delta^{ab}C_{G}\frac{1}{8\pi^2}+\frac{4}{3}g^{2}N_{f}T_{R}\frac{1}{8\pi^2}
+\end{equation}
+\par For the vertex diagram
+\begin{align}
+\partial_{t}\Gamma_{kV_1}
+=&-\partial_{t}\int_{q}\,g^3 (C_{F}-\frac{1}{2}C_{G})\frac{1}{q^6}\frac{1}{{(1+r_{A})}^3}\gamma_{\mu}(q^{2}-2m^{2})
+\notag\\=&-g^{3}(C_{F}-\frac{1}{2}C_{G})\frac{1}{8{\pi}^2}\gamma_{\mu}
+\end{align}
+\par And
+\begin{align}
+\partial_{t}\Gamma_{kV_2}
+=&\frac{1}{2}\partial_{t}\int_{q}\,g^3 C_{G}\frac{1}{q^6}\frac{1}{{(1+r_{A})}^3}\gamma_{\mu}q^{2}
+\notag\\=&\frac{1}{2}g^{3}C_G\frac{1}{8{\pi}^2}\gamma_{\mu}
+\end{align}
+\par The flow equation
+\begin{equation}
+\frac{\partial_{t}(Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}g)}{Z_{\psi,k}Z_{A,k}^{\frac{1}{2}}}=-g^{3}(C_{F}-C_{G})\frac{1}{8{\pi}^2}
+\end{equation}
+\par Finally, the $\beta=\frac{\partial_{t}g}{g}$ is
+\begin{align}
+\beta
+=&-g^{2}(C_{F}-C_{G})\frac{1}{8{\pi}^2}-\frac{1}{2}\frac{\partial_{t}Z_{A,k}}{Z_{A,k}}-\frac{\partial_{t}Z_{\psi,k}}{Z_{\psi,k}}
+\notag\\=&-g^{2}(C_{F}-C_{G})\frac{1}{8{\pi}^2}+\frac{5}{6}g^{2}\delta^{ab}C_{G}\frac{1}{8\pi^2}-\frac{2}{3}g^{2}N_{f}T_{R}\frac{1}{8\pi^2}+g^{2}C_F\frac{1}{8{\pi}^2}
+\notag\\=&g^{2}\frac{11C_{G}-4N_{f}T_{R}}{3}\frac{1}{{(4\pi)}^2}
+\end{align}
+\par So the $\beta_0$ 
+\begin{equation}
+\beta_{0}=\frac{1}{{(4\pi)}^2}\frac{11C_{G}-4N_{f}T_{R}}{3}
+\end{equation}
+\par is equal to the RG conclusion in dimensional regularization.
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
