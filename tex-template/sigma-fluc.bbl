@@ -1,0 +1,333 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Adamczyk:2013dal}
+L.~Adamczyk, et~al., {Energy Dependence of Moments of Net-proton Multiplicity
+  Distributions at RHIC}, Phys. Rev. Lett. 112 (2014) 032302.
+\newblock \href {http://arxiv.org/abs/1309.5681} {\path{arXiv:1309.5681}},
+  \href {http://dx.doi.org/10.1103/PhysRevLett.112.032302}
+  {\path{doi:10.1103/PhysRevLett.112.032302}}.
+
+\bibitem{Luo:2015ewa}
+X.~Luo, {Energy Dependence of Moments of Net-Proton and Net-Charge Multiplicity
+  Distributions at STAR}, PoS CPOD2014 (2015) 019.
+\newblock \href {http://arxiv.org/abs/1503.02558} {\path{arXiv:1503.02558}}.
+
+\bibitem{Luo:2017faz}
+X.~Luo, N.~Xu, {Search for the QCD Critical Point with Fluctuations of
+  Conserved Quantities in Relativistic Heavy-Ion Collisions at RHIC : An
+  Overview}, Nucl. Sci. Tech. 28~(8) (2017) 112.
+\newblock \href {http://arxiv.org/abs/1701.02105} {\path{arXiv:1701.02105}},
+  \href {http://dx.doi.org/10.1007/s41365-017-0257-0}
+  {\path{doi:10.1007/s41365-017-0257-0}}.
+
+\bibitem{Borsanyi:2013hza}
+S.~Borsanyi, Z.~Fodor, S.~D. Katz, S.~Krieg, C.~Ratti, K.~K. Szabo, {Freeze-out
+  parameters: lattice meets experiment}, Phys. Rev. Lett. 111 (2013) 062005.
+\newblock \href {http://arxiv.org/abs/1305.5161} {\path{arXiv:1305.5161}},
+  \href {http://dx.doi.org/10.1103/PhysRevLett.111.062005}
+  {\path{doi:10.1103/PhysRevLett.111.062005}}.
+
+\bibitem{Bellwied:2015lba}
+R.~Bellwied, S.~Borsanyi, Z.~Fodor, S.~D. Katz, A.~Pasztor, C.~Ratti, K.~K.
+  Szabo, {Fluctuations and correlations in high temperature QCD}, Phys. Rev.
+  D92~(11) (2015) 114505.
+\newblock \href {http://arxiv.org/abs/1507.04627} {\path{arXiv:1507.04627}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.92.114505}
+  {\path{doi:10.1103/PhysRevD.92.114505}}.
+
+\bibitem{Ding:2015fca}
+H.~T. Ding, S.~Mukherjee, H.~Ohno, P.~Petreczky, H.~P. Schadler, {Diagonal and
+  off-diagonal quark number susceptibilities at high temperatures}, Phys. Rev.
+  D92~(7) (2015) 074043.
+\newblock \href {http://arxiv.org/abs/1507.06637} {\path{arXiv:1507.06637}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.92.074043}
+  {\path{doi:10.1103/PhysRevD.92.074043}}.
+
+\bibitem{Karsch:2017zzw}
+F.~Karsch, {Conserved charge fluctuations at vanishing and non-vanishing
+  chemical potential}, Nucl. Phys. A967 (2017) 461--464.
+\newblock \href {http://arxiv.org/abs/1706.01620} {\path{arXiv:1706.01620}},
+  \href {http://dx.doi.org/10.1016/j.nuclphysa.2017.06.011}
+  {\path{doi:10.1016/j.nuclphysa.2017.06.011}}.
+
+\bibitem{Bazavov:2017tot}
+A.~Bazavov, et~al., {Skewness and kurtosis of net baryon-number distributions
+  at small values of the baryon chemical potential}, Phys. Rev. D96~(7) (2017)
+  074510.
+\newblock \href {http://arxiv.org/abs/1708.04897} {\path{arXiv:1708.04897}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.96.074510}
+  {\path{doi:10.1103/PhysRevD.96.074510}}.
+
+\bibitem{Fu:2015naa}
+W.-j. Fu, J.~M. Pawlowski, {Relevance of matter and glue dynamics for baryon
+  number fluctuations}, Phys. Rev. D92~(11) (2015) 116006.
+\newblock \href {http://arxiv.org/abs/1508.06504} {\path{arXiv:1508.06504}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.92.116006}
+  {\path{doi:10.1103/PhysRevD.92.116006}}.
+
+\bibitem{Fu:2015amv}
+W.-j. Fu, J.~M. Pawlowski, {Correlating the skewness and kurtosis of baryon
+  number distributions}, Phys. Rev. D93~(9) (2016) 091501.
+\newblock \href {http://arxiv.org/abs/1512.08461} {\path{arXiv:1512.08461}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.93.091501}
+  {\path{doi:10.1103/PhysRevD.93.091501}}.
+
+\bibitem{Fu:2016tey}
+W.-j. Fu, J.~M. Pawlowski, F.~Rennecke, B.-J. Schaefer, {Baryon number
+  fluctuations at finite temperature and density}, Phys. Rev. D94~(11) (2016)
+  116020.
+\newblock \href {http://arxiv.org/abs/1608.04302} {\path{arXiv:1608.04302}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.94.116020}
+  {\path{doi:10.1103/PhysRevD.94.116020}}.
+
+\bibitem{Qin:2010nq}
+S.-x. Qin, L.~Chang, H.~Chen, Y.-x. Liu, C.~D. Roberts, {Phase diagram and
+  critical endpoint for strongly-interacting quarks}, Phys. Rev. Lett. 106
+  (2011) 172301.
+\newblock \href {http://arxiv.org/abs/1011.2876} {\path{arXiv:1011.2876}},
+  \href {http://dx.doi.org/10.1103/PhysRevLett.106.172301}
+  {\path{doi:10.1103/PhysRevLett.106.172301}}.
+
+\bibitem{Xin:2014ela}
+X.-y. Xin, S.-x. Qin, Y.-x. Liu, {Quark number fluctuations at finite
+  temperature and finite chemical potential via the Dyson-Schwinger equation
+  approach}, Phys. Rev. D90~(7) (2014) 076006.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevD.90.076006}
+  {\path{doi:10.1103/PhysRevD.90.076006}}.
+
+\bibitem{Gao:2016qkh}
+F.~Gao, Y.-x. Liu, {QCD phase transitions via a refined truncation of
+  Dyson-Schwinger equations}, Phys. Rev. D94~(7) (2016) 076009.
+\newblock \href {http://arxiv.org/abs/1607.01675} {\path{arXiv:1607.01675}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.94.076009}
+  {\path{doi:10.1103/PhysRevD.94.076009}}.
+
+\bibitem{Braun-Munzinger:2016yjz}
+P.~Braun-Munzinger, A.~Rustamov, J.~Stachel, {Bridging the gap between
+  event-by-event fluctuation measurements and theory predictions in
+  relativistic nuclear collisions}, Nucl. Phys. A960 (2017) 114--130.
+\newblock \href {http://arxiv.org/abs/1612.00702} {\path{arXiv:1612.00702}},
+  \href {http://dx.doi.org/10.1016/j.nuclphysa.2017.01.011}
+  {\path{doi:10.1016/j.nuclphysa.2017.01.011}}.
+
+\bibitem{Xu:2016skm}
+H.-j. Xu, {Effects of volume corrections and resonance decays on cumulants of
+  net-charge distributions in a Monte Carlo hadron resonance gas model}, Phys.
+  Lett. B765 (2017) 188--192.
+\newblock \href {http://arxiv.org/abs/1612.06485} {\path{arXiv:1612.06485}},
+  \href {http://dx.doi.org/10.1016/j.physletb.2016.12.015}
+  {\path{doi:10.1016/j.physletb.2016.12.015}}.
+
+\bibitem{Li:2017via}
+J.~Li, H.-j. Xu, H.~Song, {Non-critical fluctuations of (net) charges and (net)
+  protons from iEBE-VISHNU hybrid model}\href {http://arxiv.org/abs/1707.09742}
+  {\path{arXiv:1707.09742}}.
+
+\bibitem{Mukherjee:2015swa}
+S.~Mukherjee, R.~Venugopalan, Y.~Yin, {Real time evolution of non-Gaussian
+  cumulants in the QCD critical regime}, Phys. Rev. C92~(3) (2015) 034912.
+\newblock \href {http://arxiv.org/abs/1506.00645} {\path{arXiv:1506.00645}},
+  \href {http://dx.doi.org/10.1103/PhysRevC.92.034912}
+  {\path{doi:10.1103/PhysRevC.92.034912}}.
+
+\bibitem{Jiang:2015hri}
+L.~Jiang, P.~Li, H.~Song, {Correlated fluctuations near the QCD critical
+  point}, Phys. Rev. C94~(2) (2016) 024918.
+\newblock \href {http://arxiv.org/abs/1512.06164} {\path{arXiv:1512.06164}},
+  \href {http://dx.doi.org/10.1103/PhysRevC.94.024918}
+  {\path{doi:10.1103/PhysRevC.94.024918}}.
+
+\bibitem{Mukherjee:2016kyu}
+S.~Mukherjee, R.~Venugopalan, Y.~Yin, {Universal off-equilibrium scaling of
+  critical cumulants in the QCD phase diagram}, Phys. Rev. Lett. 117~(22)
+  (2016) 222301.
+\newblock \href {http://arxiv.org/abs/1605.09341} {\path{arXiv:1605.09341}},
+  \href {http://dx.doi.org/10.1103/PhysRevLett.117.222301}
+  {\path{doi:10.1103/PhysRevLett.117.222301}}.
+
+\bibitem{Jiang:2017sni}
+L.~Jiang, J.-H. Zheng, H.~Stoecker, {Ising parameterization of QCD Landau free
+  energy and its dynamics}\href {http://arxiv.org/abs/1711.05339}
+  {\path{arXiv:1711.05339}}.
+
+\bibitem{Stephanov:2017wlw}
+M.~Stephanov, Y.~Yin, {Hydrodynamics and critical slowing down}, Nucl. Phys.
+  A967 (2017) 876--879.
+\newblock \href {http://arxiv.org/abs/1704.07396} {\path{arXiv:1704.07396}},
+  \href {http://dx.doi.org/10.1016/j.nuclphysa.2017.06.051}
+  {\path{doi:10.1016/j.nuclphysa.2017.06.051}}.
+
+\bibitem{Stephanov:2017ghc}
+M.~Stephanov, Y.~Yin, {Hydro+: hydrodynamics with parametric slowing down and
+  fluctuations near the critical point}\href {http://arxiv.org/abs/1712.10305}
+  {\path{arXiv:1712.10305}}.
+
+\bibitem{Stephanov:1999zu}
+M.~A. Stephanov, K.~Rajagopal, E.~V. Shuryak, {Event-by-event fluctuations in
+  heavy ion collisions and the QCD critical point}, Phys. Rev. D60 (1999)
+  114028.
+\newblock \href {http://arxiv.org/abs/hep-ph/9903292}
+  {\path{arXiv:hep-ph/9903292}}, \href
+  {http://dx.doi.org/10.1103/PhysRevD.60.114028}
+  {\path{doi:10.1103/PhysRevD.60.114028}}.
+
+\bibitem{Wetterich:1992yh}
+C.~Wetterich, {Exact evolution equation for the effective potential}, Phys.
+  Lett. B301 (1993) 90--94.
+\newblock \href {http://dx.doi.org/10.1016/0370-2693(93)90726-X}
+  {\path{doi:10.1016/0370-2693(93)90726-X}}.
+
+\bibitem{Pawlowski:2005xe}
+J.~M. Pawlowski, {Aspects of the functional renormalisation group}, Annals
+  Phys. 322 (2007) 2831--2915.
+\newblock \href {http://arxiv.org/abs/hep-th/0512261}
+  {\path{arXiv:hep-th/0512261}}, \href
+  {http://dx.doi.org/10.1016/j.aop.2007.01.007}
+  {\path{doi:10.1016/j.aop.2007.01.007}}.
+
+\bibitem{Pawlowski:2014aha}
+J.~M. Pawlowski, {Equation of state and phase diagram of strongly interacting
+  matter}, Nucl. Phys. A931 (2014) 113--124.
+\newblock \href {http://dx.doi.org/10.1016/j.nuclphysa.2014.09.074}
+  {\path{doi:10.1016/j.nuclphysa.2014.09.074}}.
+
+\bibitem{Pawlowski:2014zaa}
+J.~M. Pawlowski, F.~Rennecke, {Higher order quark-mesonic scattering processes
+  and the phase structure of QCD}, Phys. Rev. D90~(7) (2014) 076002.
+\newblock \href {http://arxiv.org/abs/1403.1179} {\path{arXiv:1403.1179}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.90.076002}
+  {\path{doi:10.1103/PhysRevD.90.076002}}.
+
+\bibitem{Helmboldt:2014iya}
+A.~J. Helmboldt, J.~M. Pawlowski, N.~Strodthoff, {Towards quantitative
+  precision in the chiral crossover: masses and fluctuation scales}, Phys. Rev.
+  D91~(5) (2015) 054010.
+\newblock \href {http://arxiv.org/abs/1409.8414} {\path{arXiv:1409.8414}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.91.054010}
+  {\path{doi:10.1103/PhysRevD.91.054010}}.
+
+\bibitem{Mitter:2014wpa}
+M.~Mitter, J.~M. Pawlowski, N.~Strodthoff, {Chiral symmetry breaking in
+  continuum QCD}, Phys. Rev. D91 (2015) 054035.
+\newblock \href {http://arxiv.org/abs/1411.7978} {\path{arXiv:1411.7978}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.91.054035}
+  {\path{doi:10.1103/PhysRevD.91.054035}}.
+
+\bibitem{Braun:2014ata}
+J.~Braun, L.~Fister, J.~M. Pawlowski, F.~Rennecke, {From Quarks and Gluons to
+  Hadrons: Chiral Symmetry Breaking in Dynamical QCD}, Phys. Rev. D94~(3)
+  (2016) 034016.
+\newblock \href {http://arxiv.org/abs/1412.1045} {\path{arXiv:1412.1045}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.94.034016}
+  {\path{doi:10.1103/PhysRevD.94.034016}}.
+
+\bibitem{Rennecke:2015eba}
+F.~Rennecke, {Vacuum structure of vector mesons in QCD}, Phys. Rev. D92~(7)
+  (2015) 076012.
+\newblock \href {http://arxiv.org/abs/1504.03585} {\path{arXiv:1504.03585}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.92.076012}
+  {\path{doi:10.1103/PhysRevD.92.076012}}.
+
+\bibitem{Wang:2015bky}
+Z.~Wang, P.~Zhuang, {Critical Behavior and Dimension Crossover of Pion
+  Superfluidity}, Phys. Rev. D94~(5) (2016) 056012.
+\newblock \href {http://arxiv.org/abs/1511.05279} {\path{arXiv:1511.05279}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.94.056012}
+  {\path{doi:10.1103/PhysRevD.94.056012}}.
+
+\bibitem{Cyrol:2016tym}
+A.~K. Cyrol, L.~Fister, M.~Mitter, J.~M. Pawlowski, N.~Strodthoff, {Landau
+  gauge Yang-Mills correlation functions}, Phys. Rev. D94~(5) (2016) 054005.
+\newblock \href {http://arxiv.org/abs/1605.01856} {\path{arXiv:1605.01856}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.94.054005}
+  {\path{doi:10.1103/PhysRevD.94.054005}}.
+
+\bibitem{Rennecke:2016tkm}
+F.~Rennecke, B.-J. Schaefer, {Fluctuation-induced modifications of the phase
+  structure in (2+1)-flavor QCD}\href {http://arxiv.org/abs/1610.08748}
+  {\path{arXiv:1610.08748}}.
+
+\bibitem{Cyrol:2017ewj}
+A.~K. Cyrol, M.~Mitter, J.~M. Pawlowski, N.~Strodthoff, {Non-perturbative
+  quark, gluon and meson correlators of unquenched QCD}\href
+  {http://arxiv.org/abs/1706.06326} {\path{arXiv:1706.06326}}.
+
+\bibitem{Cyrol:2017qkl}
+A.~K. Cyrol, M.~Mitter, J.~M. Pawlowski, N.~Strodthoff, {Non-perturbative
+  finite-temperature Yang-Mills theory}\href {http://arxiv.org/abs/1708.03482}
+  {\path{arXiv:1708.03482}}.
+
+\bibitem{Wang:2017vis}
+Z.~Wang, P.~Zhuang, {Meson Spectral Functions at Finite Temperature and Isospin
+  Density with Functional Renormalization Group}\href
+  {http://arxiv.org/abs/1703.01035} {\path{arXiv:1703.01035}}.
+
+\bibitem{Fu:2017vvg}
+W.-j. Fu, Y.-x. Liu, {Four-fermion interactions and the chiral symmetry
+  breaking in an external magnetic field}, Phys. Rev. D96~(7) (2017) 074019.
+\newblock \href {http://arxiv.org/abs/1705.09841} {\path{arXiv:1705.09841}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.96.074019}
+  {\path{doi:10.1103/PhysRevD.96.074019}}.
+
+\bibitem{Fu:2018a}
+W.-j. Fu, J.~M. Pawlowski, F.~Rennecke, in preparation.
+
+\bibitem{Fukushima:2017csk}
+K.~Fukushima, V.~Skokov, {Polyakov loop modeling for hot QCD}, Prog. Part.
+  Nucl. Phys. 96 (2017) 154--199.
+\newblock \href {http://arxiv.org/abs/1705.00718} {\path{arXiv:1705.00718}},
+  \href {http://dx.doi.org/10.1016/j.ppnp.2017.05.002}
+  {\path{doi:10.1016/j.ppnp.2017.05.002}}.
+
+\bibitem{Schaefer:2007pw}
+B.-J. Schaefer, J.~M. Pawlowski, J.~Wambach, {The Phase Structure of the
+  Polyakov--Quark-Meson Model}, Phys. Rev. D76 (2007) 074023.
+\newblock \href {http://arxiv.org/abs/0704.3234} {\path{arXiv:0704.3234}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.76.074023}
+  {\path{doi:10.1103/PhysRevD.76.074023}}.
+
+\bibitem{Fukushima:2003fw}
+K.~Fukushima, {Chiral effective model with the Polyakov loop}, Phys. Lett. B591
+  (2004) 277--284.
+\newblock \href {http://arxiv.org/abs/hep-ph/0310121}
+  {\path{arXiv:hep-ph/0310121}}, \href
+  {http://dx.doi.org/10.1016/j.physletb.2004.04.027}
+  {\path{doi:10.1016/j.physletb.2004.04.027}}.
+
+\bibitem{Ratti:2005jh}
+C.~Ratti, M.~A. Thaler, W.~Weise, {Phases of QCD: Lattice thermodynamics and a
+  field theoretical model}, Phys. Rev. D73 (2006) 014019.
+\newblock \href {http://arxiv.org/abs/hep-ph/0506234}
+  {\path{arXiv:hep-ph/0506234}}, \href
+  {http://dx.doi.org/10.1103/PhysRevD.73.014019}
+  {\path{doi:10.1103/PhysRevD.73.014019}}.
+
+\bibitem{Fu:2007xc}
+W.-j. Fu, Z.~Zhang, Y.-x. Liu, {2+1 flavor Polyakov-Nambu-Jona-Lasinio model at
+  finite temperature and nonzero chemical potential}, Phys. Rev. D77 (2008)
+  014006.
+\newblock \href {http://arxiv.org/abs/0711.0154} {\path{arXiv:0711.0154}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.77.014006}
+  {\path{doi:10.1103/PhysRevD.77.014006}}.
+
+\bibitem{Stephanov:2008qz}
+M.~A. Stephanov, {Non-Gaussian fluctuations near the QCD critical point}, Phys.
+  Rev. Lett. 102 (2009) 032301.
+\newblock \href {http://arxiv.org/abs/0809.3450} {\path{arXiv:0809.3450}},
+  \href {http://dx.doi.org/10.1103/PhysRevLett.102.032301}
+  {\path{doi:10.1103/PhysRevLett.102.032301}}.
+
+\bibitem{Haas:2013qwp}
+L.~M. Haas, R.~Stiele, J.~Braun, J.~M. Pawlowski, J.~Schaffner-Bielich,
+  {Improved Polyakov-loop potential for effective models from functional
+  calculations}, Phys. Rev. D87~(7) (2013) 076004.
+\newblock \href {http://arxiv.org/abs/1302.1993} {\path{arXiv:1302.1993}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.87.076004}
+  {\path{doi:10.1103/PhysRevD.87.076004}}.
+
+\end{thebibliography}
